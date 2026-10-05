@@ -4,33 +4,210 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Happy Teachers' Day 💗</title>
+    <title>For Our Teachers ♡</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600;700&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <div class="container">
+    <!-- =========================
+         BACKGROUND
+    ========================== -->
 
-        <!-- Envelope -->
-        <div class="envelope" id="envelope" onclick="openLetter()">
+    <div class="background">
 
-            <div class="flap"></div>
+        <div class="glow glow-one"></div>
+        <div class="glow glow-two"></div>
+        <div class="glow glow-three"></div>
 
-            <div class="letter">
-                <div id="message"></div>
+        <span class="floating-symbol symbol-one">♡</span>
+        <span class="floating-symbol symbol-two">✿</span>
+        <span class="floating-symbol symbol-three">♡</span>
+        <span class="floating-symbol symbol-four">✦</span>
+        <span class="floating-symbol symbol-five">✿</span>
+        <span class="floating-symbol symbol-six">♡</span>
+
+    </div>
+
+
+    <!-- =========================
+         OPENING SCREEN
+    ========================== -->
+
+    <section class="opening-screen" id="openingScreen">
+
+        <div class="opening-content">
+
+            <div class="eyebrow">
+                A LITTLE SOMETHING
+                <span>♡</span>
             </div>
 
-            <div class="heart">♥</div>
+            <h1>
+                Happy
+                <span>Teachers' Day</span>
+            </h1>
+
+            <p class="subtitle">
+                A little message of appreciation
+                from your students.
+            </p>
+
+
+            <!-- Envelope -->
+
+            <div
+                class="envelope-wrapper"
+                id="envelopeWrapper"
+                onclick="openLetter()"
+            >
+
+                <div class="envelope">
+
+                    <div class="envelope-back"></div>
+
+                    <div class="envelope-flap"></div>
+
+                    <div class="envelope-front"></div>
+
+                    <div class="envelope-fold-left"></div>
+                    <div class="envelope-fold-right"></div>
+
+                    <div class="seal">
+                        <span>♥</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="click-hint">
+                <span class="hint-line"></span>
+
+                <span>
+                    Click to open
+                </span>
+
+                <span class="hint-heart">
+                    ♡
+                </span>
+
+                <span class="hint-line"></span>
+            </div>
 
         </div>
 
-        <p class="instruction" id="instruction">
-            Click the letter to open 💌
-        </p>
+    </section>
 
-    </div>
+
+
+    <!-- =========================
+         LETTER / MESSAGE SCREEN
+    ========================== -->
+
+    <section
+        class="letter-screen"
+        id="letterScreen"
+    >
+
+        <div class="letter-page">
+
+            <div class="letter-decoration top-decoration">
+                ✦ &nbsp; ♡ &nbsp; ✦
+            </div>
+
+
+            <div class="letter-label">
+                A MESSAGE OF APPRECIATION
+            </div>
+
+
+            <div class="letter-heading">
+
+                <h2>
+                    Dear Ma'am/Sir,
+                </h2>
+
+                <div class="heading-line"></div>
+
+            </div>
+
+
+            <div class="message-wrapper">
+
+                <div
+                    class="message"
+                    id="message"
+                ></div>
+
+                <span
+                    class="typing-cursor"
+                    id="cursor"
+                ></span>
+
+            </div>
+
+
+            <div
+                class="signature"
+                id="signature"
+            >
+
+                <div class="signature-stars">
+                    ✦ &nbsp; ✧ &nbsp; ✦
+                </div>
+
+                <p>
+                    With heartfelt appreciation,
+                </p>
+
+                <div class="signature-name">
+                    Your Students ♡
+                </div>
+
+            </div>
+
+
+            <div class="final-greeting" id="finalGreeting">
+
+                <div class="final-line"></div>
+
+                <h3>
+                    Happy Teachers' Day!
+                </h3>
+
+                <p>
+                    Thank you for inspiring us,
+                    guiding us, and believing in us.
+                </p>
+
+                <div class="final-heart">
+                    ♡
+                </div>
+
+            </div>
+
+
+            <div class="letter-decoration bottom-decoration">
+                ✦ &nbsp; ♡ &nbsp; ✦
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Floating hearts created by JS -->
+    <div id="floatingHearts"></div>
+
 
     <script src="script.js"></script>
 
