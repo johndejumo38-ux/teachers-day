@@ -1,0 +1,216 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: "Arial", sans-serif;
+
+    background: linear-gradient(
+        135deg,
+        #ffe4ec,
+        #fff1f5,
+        #e8f4ff
+    );
+
+    overflow: hidden;
+}
+
+/* Cute background hearts */
+
+body::before {
+    content: "♡  ✿  ♡  ✿  ♡  ✿  ♡";
+
+    position: fixed;
+    top: 10%;
+    left: 5%;
+
+    font-size: 35px;
+    color: rgba(255, 130, 160, 0.35);
+
+    letter-spacing: 25px;
+}
+
+body::after {
+    content: "✿  ♡  ✿  ♡  ✿  ♡";
+
+    position: fixed;
+    bottom: 10%;
+    right: 5%;
+
+    font-size: 35px;
+    color: rgba(255, 130, 160, 0.35);
+
+    letter-spacing: 25px;
+}
+
+
+/* Main container */
+
+.container {
+    text-align: center;
+}
+
+
+/* Envelope */
+
+.envelope {
+    position: relative;
+
+    width: 350px;
+    height: 230px;
+
+    background: #f7a8bd;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 15px 35px rgba(180, 100, 120, 0.25);
+
+    transition: transform 0.3s ease;
+}
+
+.envelope:hover {
+    transform: translateY(-8px);
+}
+
+
+/* Letter */
+
+.letter {
+    position: absolute;
+
+    width: 310px;
+    height: 200px;
+
+    background: #fffdf8;
+
+    left: 20px;
+    bottom: 15px;
+
+    border-radius: 8px;
+
+    padding: 25px;
+
+    text-align: left;
+
+    overflow: hidden;
+
+    z-index: 2;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+
+    transition: all 0.8s ease;
+}
+
+
+/* Envelope flap */
+
+.flap {
+    position: absolute;
+
+    width: 0;
+    height: 0;
+
+    border-left: 175px solid transparent;
+    border-right: 175px solid transparent;
+    border-top: 120px solid #f28faa;
+
+    top: 0;
+    left: 0;
+
+    z-index: 4;
+
+    transform-origin: top;
+
+    transition: transform 0.8s ease;
+}
+
+
+/* Heart */
+
+.heart {
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    color: white;
+
+    font-size: 45px;
+
+    z-index: 5;
+
+    transition: opacity 0.4s ease;
+}
+
+
+/* Instruction */
+
+.instruction {
+    margin-top: 30px;
+
+    color: #b85c78;
+
+    font-size: 16px;
+
+    animation: float 2s infinite ease-in-out;
+}
+
+
+/* OPENED ENVELOPE */
+
+.envelope.open .flap {
+    transform: rotateX(180deg);
+
+    z-index: 1;
+}
+
+.envelope.open .letter {
+    transform: translateY(-140px);
+
+    height: 330px;
+
+    z-index: 6;
+}
+
+.envelope.open .heart {
+    opacity: 0;
+}
+
+
+/* Message */
+
+#message {
+    color: #5c4650;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+
+/* Floating animation */
+
+@keyframes float {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+
+}
